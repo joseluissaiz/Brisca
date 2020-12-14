@@ -20,6 +20,7 @@ version = "1.0"
 import os
 import msvcrt
 import time
+import Brisca
 
 
 #-----------------------------------------------------------------------------------Funciones del sistema operativo
@@ -30,6 +31,7 @@ def borrar_pantalla():
 
 #-------------------------------------------------------------------------------------Variables del menu
 selection = 'Jugar'
+exitMenu = 'False'
 
 
 
@@ -41,7 +43,7 @@ def moverse_menuX1():
     
     global selection
     global currentMenu
-    global exit
+    global exitMenu
     
     selectBool = False # Esta variable evita que el menu parpadee infinitamente
 
@@ -84,10 +86,10 @@ def moverse_menuX1():
                 currentMenu = 'Instrucciones'
                 mostrar_menuX2()
             elif selection == 'Jugar':
-                os.system("Brisca.py")
-                exit = True
+                exitMenu = True
+                Brisca.jugar()
             elif selection == 'Salir':
-                exit = True
+                exitMenu = True
         
     if selectBool == True: # El menu solo se mostrará cuando se tenga que actualizar
         mostrar_menuX1()
@@ -390,15 +392,17 @@ def pantalla_principal():
 
 
 #----------------------------------------------------------Loop funcional del menu
+
+
+    
 mostrar_menuX1()
 
 currentMenu = 'Principal'
-selection = 'Jugar'
-exit = False
+exitMenu = False
 pantalla_principal()
 mostrar_menuX1()
 
-while exit == False:
+while exitMenu == False:
 
     if currentMenu == 'Principal':
         moverse_menuX1()
