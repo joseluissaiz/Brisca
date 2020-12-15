@@ -47,14 +47,9 @@ def borrar_pantalla():
 
 
 
-# ----------------------------------------------------------Función para mostrar el menú "Retry"
 
-selection = 'Retry'
-
-def moverse_RetryMenu():
-    
-    global selection
-    global runningRM
+#---------------------------------------------------Funcion para resetear los valores iniciales de las partidas
+def reset_match():
     
     global nombreMaquina
     global puntosJugador
@@ -69,10 +64,77 @@ def moverse_RetryMenu():
     
     global cartasjugador
     global cartasmaquina
-    
-    
-    
     global cardlist
+    
+    
+    cartasjugador = []
+    cartasmaquina = []
+    cardlist = []
+    nombreMaquina = 'Maquina'
+    puntosMaquina = 0
+    puntosJugador = 0
+            
+    puntosComprobar1 = 0
+    puntosComprobar2 = 0
+
+    generar_cartas()
+
+
+    random.shuffle(cardlist)
+
+
+    cartasjugador.append(cardlist[0])
+    cardlist.remove(cartasjugador[0])
+    cartasmaquina.append(cardlist[0])
+    cardlist.remove(cartasmaquina[0])
+
+    cartasjugador.append(cardlist[0])
+    cardlist.remove(cartasjugador[1])
+    cartasmaquina.append(cardlist[0])
+    cardlist.remove(cartasmaquina[1])
+
+    cartasjugador.append(cardlist[0])
+    cardlist.remove(cartasjugador[2])
+    cartasmaquina.append(cardlist[0])
+    cardlist.remove(cartasmaquina[2])
+
+
+
+
+    cartaDominante = cardlist[0]
+    cardlist.remove(cartaDominante)
+
+
+
+    elegirPrimerTurno = random.randint(0,1)
+    if elegirPrimerTurno == 0:
+        turno = 'Máquina'
+    else:
+        turno = 'Jugador'
+
+    acabarPartida = False
+    Finalizar = False
+
+    gana = 'Nadie'
+
+
+
+
+# ----------------------------------------------------------Función para mostrar el menú "Retry"
+
+selection = 'Retry'
+
+def moverse_RetryMenu():
+    
+    global selection
+    global runningRM
+    global currentMenu
+    
+
+    
+    
+    
+
     
     selectBool = False # Esta variable evita que el menu parpadee infinitamente
 
@@ -99,62 +161,15 @@ def moverse_RetryMenu():
         
         elif key == "x":
             if selection == 'Retry':
-                cartasjugador = []
-                cartasmaquina = []
-                cardlist = []
-                nombreMaquina = 'Maquina'
-                puntosMaquina = 0
-                puntosJugador = 0
-
-                puntosComprobar1 = 0
-                puntosComprobar2 = 0
-
-                generar_cartas()
-
-
-                random.shuffle(cardlist)
-
-
-                cartasjugador.append(cardlist[0])
-                cardlist.remove(cartasjugador[0])
-                cartasmaquina.append(cardlist[0])
-                cardlist.remove(cartasmaquina[0])
-
-                cartasjugador.append(cardlist[0])
-                cardlist.remove(cartasjugador[1])
-                cartasmaquina.append(cardlist[0])
-                cardlist.remove(cartasmaquina[1])
-
-                cartasjugador.append(cardlist[0])
-                cardlist.remove(cartasjugador[2])
-                cartasmaquina.append(cardlist[0])
-                cardlist.remove(cartasmaquina[2])
-
-
-
-
-                cartaDominante = cardlist[0]
-                cardlist.remove(cartaDominante)
-
-
-
-                elegirPrimerTurno = random.randint(0,1)
-                if elegirPrimerTurno == 0:
-                    turno = 'Máquina'
-                else:
-                    turno = 'Jugador'
-
-                acabarPartida = False
-                Finalizar = False
-
-                gana = 'Nadie'
                 
+                reset_match()
                 jugar()
-                
                 runningRM = False
                 
             elif selection == 'Volver':
                 runningRM = False
+                reset_match()
+                currentMenu = 'Principal'
                 selection = 'Jugar'
                 showmenu()
 
@@ -211,7 +226,9 @@ RetryMenu()
 def ShowRetryMenu():
     
     global selection
+    global currentMenu
     
+    currentMenu = 'RetryMenu'
     selection = 'Retry'
     
     RetryMenu()
@@ -268,6 +285,9 @@ acabarPartida = False
 Finalizar = False
 
 gana = 'Nadie'
+
+
+winner = 'Nadie'
 #----------------------------------------Juego
 
 #Generación de todas las cartas
@@ -730,10 +750,52 @@ def turno_maquina():
                 acabarPartida = True
                 
 
+
+
+
+#----------------------------------------------------------------Actualiza el archivo de los resultados
+
+def actualizar_resultados():
+    
+    global winner
+    
+    if not os.path.exists('Config/results.bcd'): # Si no existe el archivo, crea uno nuevo
+        file = open('Config/results.bcd', 'w')
+
+        file.write("0\n")
+        file.write('0')
+        file.close()
+    
+    file = open("Config/results.bcd", "r") # Lee el archivo y recoge los resultados
+    currentUserMark = int(file.readline())
+    currentMachMark = int(file.readline())
+    file.close()
+    
+    
+    if winner == 'JUGADOR':
+        currentUserMark += 1
+    else:
+        currentMachMark += 1
+        
+        
+    file = open("Config/results.bcd", "w") # Actualiza los resultados
+    file.write(str(currentUserMark) + "\n")
+    file.write(str(currentMachMark))
+    file.close()
+
+
+
+
+
+
+
+
 #---------------------------------------------------------------------------Bucle del juego
 
 
 def jugar():
+    
+    global winner
     
     running = True
     
@@ -746,6 +808,8 @@ def jugar():
                 winner = 'MÁQUINA'
         
             exit = False
+        
+            actualizar_resultados()
         
             while exit == False:
                 borrar_pantalla()
@@ -771,9 +835,6 @@ def jugar():
                 turno_maquina()
     
     
-
-
-
 
 
 
@@ -879,6 +940,9 @@ def moverse_menuX1():
             elif selection == 'Salir':
                 borrar_pantalla()
                 sys.exit()
+            elif selection == 'Registro':
+                currentMenu = 'Registro'
+                mostrar_menuX3()
         
     if selectBool == True: # El menu solo se mostrará cuando se tenga que actualizar
         mostrar_menuX1()
@@ -947,8 +1011,7 @@ def moverse_menuX2_1():
     global selection
     global currentMenu
     
-    selectBool = False # Esta variable evita que el menu parpadee infinitamente
-
+    
     if msvcrt.kbhit():
         key = msvcrt.getch().decode("utf-8").lower()
         if key == "x" or key == "z":
@@ -956,9 +1019,6 @@ def moverse_menuX2_1():
             currentMenu = 'Instrucciones'
             mostrar_menuX2()
 
-        
-    if selectBool == True: # El menu solo se mostrará cuando se tenga que actualizar
-        mostrar_menuX2_1()
         
 #---------------------------------------------------Funcion para salir del menu de Puntuacion de cartas<
 def moverse_menuX2_2():
@@ -974,7 +1034,22 @@ def moverse_menuX2_2():
             currentMenu = 'Instrucciones'
             mostrar_menuX2()
 
-        
+#-------------------------------------------------------------Funcion para salir del menu de Resultados<
+
+def moverse_menuX3():
+    
+    
+    global selection
+    global currentMenu
+    
+
+    if msvcrt.kbhit():
+        key = msvcrt.getch().decode("utf-8").lower()
+        if key == "x" or key == "z":
+            selection = 'Registro'
+            currentMenu = 'Principal'
+            mostrar_menuX1()
+ 
 
 #------------------------------------------------------------------Funciones de Pantallas
 
@@ -1144,6 +1219,99 @@ def mostrar_menuX2_2():
 
 
 
+
+
+#-------------------------------------------------------Mostrar el menu de los resultados<
+
+
+def mostrar_menuX3():
+    
+    global selection
+    
+    
+    
+    if not os.path.exists('Config/results.bcd'): # Si no existe el archivo, crea uno nuevo
+        file = open('Config/results.bcd', 'w')
+
+        file.write("0\n")
+        file.write('0')
+        file.close()
+    
+    file = open("Config/results.bcd", "r") # Lee el archivo y recoge los resultados
+    currentUserMark = int(file.readline())
+    currentMachMark = int(file.readline())
+    file.close()
+    
+    
+    
+    
+    file = open("Config/results.bcd", "r") # Lee el archivo y recoge los resultados
+    currentUserMark = int(file.readline())
+    currentMachMark = int(file.readline())
+    file.close()    
+    
+    
+    #---------------Formatea el resultado dependiendo del número de digitos de este
+    
+    # Para los resultados del jugador
+    userBlankSpaces = 17
+    
+    for i in range(0,len(str(currentUserMark))):
+        userBlankSpaces -= 1
+    
+    userSpaces = ''
+    
+    for i in range (0,userBlankSpaces):
+        userSpaces = userSpaces + ' '
+    
+    
+    
+    # Para los resultados de la máquina
+    
+    machBlankSpaces = 14
+    
+    for i in range(0,len(str(currentMachMark))):
+        machBlankSpaces -= 1
+    
+    machSpaces = ''
+    
+    for i in range (0,machBlankSpaces):
+        machSpaces = machSpaces + ' '
+    
+    
+    
+    
+    borrar_pantalla()
+    print(' __________________________________________________________________')
+    print('|                                 |                                |')
+    print('|            BRISCARD             |            Registro            |')
+    print('|_________________________________|________________________________|')
+    print('|                                                                  |')
+    print('|                                                                  |')
+    print('|' + machSpaces + 'La máquina ha ganado en total ' + str(currentMachMark) + ' partidas             |')
+    print('|                                                                  |')
+    print('|' + userSpaces + 'Tu has ganado en total ' + str(currentUserMark) +' partidas                 |')
+    print('|                                                                  |')                                                                                                                              
+    print('|__________________________________________________________________|')
+    print('')
+    print('      Controles')
+    print(' __________________')
+    print('|                  |')
+    print('| Arriba:      [W] |')
+    print('| Abajo:       [S] |')
+    print('| Seleccionar: [X] |')
+    print('| Atras:       [Z] |')
+    print('|__________________|\n')
+
+    moverse_menuX3()
+
+
+
+
+
+
+
+
 #--------------------------------------------------------Muestra la pantalla pricipal
 def pantalla_principal():
     
@@ -1202,6 +1370,10 @@ def showmenu():
             moverse_menuX2_1()
         elif currentMenu == 'Puntuacion':
             moverse_menuX2_2()
+        elif currentMenu == 'Registro':
+            moverse_menuX3()
+        elif currentMenu == 'RetryMenu':
+            moverse_RetryMenu()
     
         time.sleep(0.1) #Tiempo de refresco de respuesta (evita el sobrecalentamiento)
         
