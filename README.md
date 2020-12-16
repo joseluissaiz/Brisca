@@ -1,10 +1,10 @@
-# Brisca
+# Briscard
 Proyecto Programación 1r Trimestre
 
 
 
 
-Objetivos
+## Objetivos
 
 El objetivo de este proyecto es la creación de un juego de mesa en entorno texto mediante la cooperación del equipo de desarrollo utilizando la metodología Scrum.
 
@@ -17,7 +17,7 @@ El verdadero reto del juego será poder jugar, con resultado de ganar o perder p
 
 
 
-Planificación
+## Planificación
 
 Por decisión unánime de los integrantes que lo conforman, el desarrollo del proyecto se dividirá en cuatro fases, la fase de investigación y desarrollo conceptual, la fase de traslado en entornos de programa, la fase de codificación y creación de funciones, y finalmente la fase de pruebas y corrección de errores.
 
@@ -47,7 +47,7 @@ Está es la última pero no menos importante fase de desarrollo, se incluirán e
 
 
 
-# Creación del documento IDC
+## Creación del documento IDC
 
 Cómo jugar a la brisca (2 personas)!!!
 
@@ -92,7 +92,7 @@ Cómo jugar a la brisca (2 personas)!!!
 
 
 
-# Creación del documento TEP
+## Creación del documento TEP
 
 ￫Preparación
 
@@ -274,7 +274,7 @@ Se actualiza el archivo del registro y se le suma 1 a quien haya ganado(Jugador/
 
 
 
-# Creación del documento CCF
+## Creación del documento CCF
 
 Sprints realizados durante el proceso de desarrollo del producto.
 
@@ -345,7 +345,7 @@ Por otro lado, creamos una función llamada menú retry que lo que hace es que c
 
 
 
-Creación del documento PCE
+## Creación del documento PCE
 
 (Errores en las pruebas unitarias e integradas)
 
