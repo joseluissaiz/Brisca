@@ -24,22 +24,22 @@ Por decisión unánime de los integrantes que lo conforman, el desarrollo del pr
 
 
 **IDC (Investigación y desarrollo conceptual)**
-En esta fase se procederá a buscar información sobre el funcionamiento del juego, estos datos se utilizarán para crear el pseudocódigo del programa y posteriormente presentarlo a la siguiente fase, los integrantes del equipo deberán identificar las reglas generales que componen el juego y hacer un esquema sobre las historias de usuario que se van a necesitar.
+	En esta fase se procederá a buscar información sobre el funcionamiento del juego, estos datos se utilizarán para crear el pseudocódigo del programa y posteriormente 	presentarlo a la siguiente fase, los integrantes del equipo deberán identificar las reglas generales que componen el juego y hacer un esquema sobre las historias de usuario que se van a necesitar.
 
 
 
 **TEP (Traslado a entorno de programa)**
-Al haber creado las historias de usuario del programa, se creará el pseudocódigo y este deberá modificarse para adaptarse al lenguaje de programación en cuestión, en este caso Python 3, para ello se recogerán todas las historias de usuario redactadas y pasarlas a un lenguaje más técnico describiendo qué función interna llevarán a cabo sobre el programa principal.
+	Al haber creado las historias de usuario del programa, se creará el pseudocódigo y este deberá modificarse para adaptarse al lenguaje de programación en cuestión, en este caso Python 3, para ello se recogerán todas las historias de usuario redactadas y pasarlas a un lenguaje más técnico describiendo qué función interna llevarán a cabo sobre el programa principal.
 
 
 
 **CCF (Codificación y creación de funciones)**
-En esta fase es donde se creará el código de la aplicación, es una de las fases más importantes y duraderas del proyecto, en está se creará un archivo principal que recogerá todas las funciones relacionadas con el juego y su estructura. En otros dos archivos aparte se irán desarrollando en paralelo distintos menús o subprocesos que finalmente se fusionarán en el archivo principal mediante una adaptación de las variables y valores para que todo encaje correctamente.
+	En esta fase es donde se creará el código de la aplicación, es una de las fases más importantes y duraderas del proyecto, en está se creará un archivo principal que recogerá todas las funciones relacionadas con el juego y su estructura. En otros dos archivos aparte se irán desarrollando en paralelo distintos menús o subprocesos que finalmente se fusionarán en el archivo principal mediante una adaptación de las variables y valores para que todo encaje correctamente.
 
 
 
 **PCE (Pruebas y corrección de errores)**
-Está es la última pero no menos importante fase de desarrollo, se incluirán en ella todas las pruebas unitarias y funcionales de las funciones del programa, se comprobará que todo el código esté estructurado, identificado y ordenado correctamente para la correcta interpretación y comprensión de este, aparte de que sea efectivo al ser ejecutado teniendo en cuenta las demás porciones de código.
+	Está es la última pero no menos importante fase de desarrollo, se incluirán en ella todas las pruebas unitarias y funcionales de las funciones del programa, se comprobará que todo el código esté estructurado, identificado y ordenado correctamente para la correcta interpretación y comprensión de este, aparte de que sea efectivo al ser ejecutado teniendo en cuenta las demás porciones de código.
 
 		
 
@@ -52,15 +52,17 @@ Está es la última pero no menos importante fase de desarrollo, se incluirán e
 Cómo jugar a la brisca (2 personas)!!!
 
 **1 - Preparación.**
-1.1 Se adquiere una baraja de cartas española
-1.2 Se sacan las cartas del sobre
-1.3 Se descartan las cartas 8 y 9 de cada palo
-1.4 Se barajan las cartas
-1.5 Cada jugador recoge tres cartas
-1.6 Se saca la carta del triunfo (la dominante)
-1.7 Se elige el primer turno de forma aleatoria
+
+	1.1 Se adquiere una baraja de cartas española
+	1.2 Se sacan las cartas del sobre
+	1.3 Se descartan las cartas 8 y 9 de cada palo
+	1.4 Se barajan las cartas
+	1.5 Cada jugador recoge tres cartas
+	1.6 Se saca la carta del triunfo (la dominante)
+	1.7 Se elige el primer turno de forma aleatoria
 
 **2 - Jugar turnos.**
+
 	2.1 El jugador que tiene el turno primero saca una carta de las que tiene
 	2.2 El siguiente jugador saca una cartas de las que posee
 	2.3 Se comparan los valores y palos de esas dos cartas con la central
@@ -71,17 +73,18 @@ Cómo jugar a la brisca (2 personas)!!!
 
 **3 - Finalizar la partida**
 
-        3.1 La partida finaliza cuando se acaban las cartas de la baraja
+	3.1 La partida finaliza cuando se acaban las cartas de la baraja
 	3.1 Gana el jugador que haya conseguido más puntos en el proceso
 
 **4 - Reglas del turno**
-￫ Si un jugador saca una carta del palo dominante y el otro no, gana inmediatamente el jugador que la ha sacado.
 
-￫ Si el jugador que saca primero tira la carta de un palo, y el otro jugador tira otra de distinto palo que no es el dominante, gana el  jugador que ha tirado primero ya que él decide qué palo se va a jugar esa ronda.
+	￫ Si un jugador saca una carta del palo dominante y el otro no, gana inmediatamente el jugador que la ha sacado.
 
-￫ Si los dos sacan la carta del mismo palo, se tendrá en cuenta la puntuación de las dos cartas para establecer el ganador.
+	￫ Si el jugador que saca primero tira la carta de un palo, y el otro jugador tira otra de distinto palo que no es el dominante, gana el  jugador que ha tirado primero ya que él decide qué palo se va a jugar esa ronda.
 
-￫Puntuación de las cartas - [1 = 11pts], [3 = 10pts], [10 = 2pts], [11 = 3pts], [12 = 4pts], [Resto = 0].
+	￫ Si los dos sacan la carta del mismo palo, se tendrá en cuenta la puntuación de las dos cartas para establecer el ganador.
+
+	￫Puntuación de las cartas - [1 = 11pts], [3 = 10pts], [10 = 2pts], [11 = 3pts], [12 = 4pts], [Resto = 0].
 
 
 
@@ -96,50 +99,50 @@ Cómo jugar a la brisca (2 personas)!!!
 
 **￫Preparación**
 
-Crear la baraja de cartas
-Crear una lista vacía de cartas[]
+	Crear la baraja de cartas
+	Crear una lista vacía de cartas[]
 
-Para cada carta del palo de bastos (hasta 12):
+	Para cada carta del palo de bastos (hasta 12):
 	Crear una carta y añadir al mazo
 
-Para cada carta del palo de espadas (hasta 12):
+	Para cada carta del palo de espadas (hasta 12):
 	Crear una carta y añadir al mazo
 
-Para cada carta del palo de copas (hasta 12):
+	Para cada carta del palo de copas (hasta 12):
 	Crear una carta y añadir al mazo
 
-Para cada carta del palo de oros (hasta 12):
+	Para cada carta del palo de oros (hasta 12):
 	Crear una carta y añadir al mazo
 
-Aleatoriamente cambiar el orden de los elementos de la lista
+	Aleatoriamente cambiar el orden de los elementos de la lista
 
 
 
-Asignar cartas iniciales al jugador, a la máquina, y a la carta dominante
-Crear una baraja del jugador vacía[]
+	Asignar cartas iniciales al jugador, a la máquina, y a la carta dominante
+	Crear una baraja del jugador vacía[]
 
-Añadir la primera carta del montón a la baraja del jugador
-Quitar la primera carta del montón de la lista de cartas totales
-(x3)
+	Añadir la primera carta del montón a la baraja del jugador
+	Quitar la primera carta del montón de la lista de cartas totales
+	(x3)
 
 
-Crear una baraja de la máquina vacía[]
+	Crear una baraja de la máquina vacía[]
 
-Añadir la primera carta del montón a la baraja de la máquina
-Quitar la primera carta del montón de la lista de cartas totales
-(x3)
+	Añadir la primera carta del montón a la baraja de la máquina
+	Quitar la primera carta del montón de la lista de cartas totales
+	(x3)
 
-Carta dominante = Añadir la primera carta del montón
-Quitar la primera carta del montón de la lista de cartas totales
+	Carta dominante = Añadir la primera carta del montón
+	Quitar la primera carta del montón de la lista de cartas totales
 
-Elegir el primer turno aleatoriamente
-Elegir un número aleatorio entre el 0 y el 1:
+	Elegir el primer turno aleatoriamente
+	Elegir un número aleatorio entre el 0 y el 1:
 
-Si el número sale 0:
-Empieza un jugador
+	Si el número sale 0:
+	Empieza un jugador
 
-O si el número sale 1:
-Empieza otro jugador
+	O si el número sale 1:
+	Empieza otro jugador
 
 
 **￫Jugar Turnos**
