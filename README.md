@@ -147,126 +147,130 @@ Cómo jugar a la brisca (2 personas)!!!
 
 **￫Jugar Turnos**
 
-Se crea un bucle donde se gestionan los turnos
-Mientras queden cartas por jugar:
+	Se crea un bucle donde se gestionan los turnos
+	Mientras queden cartas por jugar:
 
-Si el turno es del jugador:
-Se muestra la interacción del jugador()
+	Si el turno es del jugador:
+	Se muestra la interacción del jugador()
 
-O si el turno es de la máquina:
-Se muestra la interacción de la máquina()
-
-
-Interacción del jugador
-Se mostrará por pantalla un menú muy chulo con información de la partida en curso
-
-Se mostrará la primera carta del mazo del jugador
-Se mostrará la segunda carta del mazo del jugador
-Se mostrará la tercera carta del mazo del jugador
-
-Se le pedirá al usuario que introduzca qué carta desea lanzar(1,2 o 3)
-Se eliminará esa carta de la mano del usuario
-
-Se asigna una carta de la máquina de las que tiene en su mazo
-Se eliminará esa carta de la mano de la máquina
-
-Se muestra otro bonito menú con las dos cartas lanzadas parecido al anterior
-
-Se comparan los resultados()
-
-Interacción de la máquina
-Se asigna una carta de la máquina de las que tiene en su mazo
-Se eliminará esa carta de la mano de la máquina
-
-Se muestra un menú con la carta que ha lanzado la máquina y con información de la partida en curso
-
-Se mostrará la primera carta del mazo del jugador
-Se mostrará la segunda carta del mazo del jugador
-Se mostrará la tercera carta del mazo del jugador
-
-Se le pedirá al usuario que introduzca qué carta desea lanzar(1,2 o 3)
-Se eliminará esa carta de la mano del usuario
-Se comparan los resultados()
-
-Comparar resultados
-Recogemos la carta que ha lanzado el jugador
-Recogemos la carta que ha lanzado la máquina
-
-Si la carta del jugador es = 1:
-Esa carta vale 11
-O si la carta del jugador es = 2:
-Esa carta vale 0.01
-O si la carta del jugador es = 3:
-Esa carta vale 10
-O si la carta del jugador es = 4:
-Esa carta vale 0.02
-O si la carta del jugador es = 5:
-Esa carta vale 0.03
-O si la carta del jugador es = 6:
-Esa carta vale 0.04
-O si la carta del jugador es = 7:
-Esa carta vale 0.05
-O si la carta del jugador es = 10:
-Esa carta vale 2
-O si la carta del jugador es = 11:
-Esa carta vale 3
-O si la carta del jugador es = 12:
-Esa carta vale 4
-
-(Hacemos lo mismo con la carta de la máquina)
-
-Si las cartas son distintas y la del jugador es del palo dominante y el de la máquina no:
-Gana = el jugador
-Suma puntos(Jugador)
-
-O si las cartas son distintas y la carta de la máquina es del palo dominante y la del jugador no:
-Gana = la máquina
-Suma puntos(Máquina)
-
-O si el palo del jugador es del mismo que el de la máquina:
-Si el valor de la carta del jugador es mayor que la de la máquina:
-Gana = el jugador
-Suma puntos(Jugador)
-O si no:
-Gana = la máquina
-Suma puntos(Máquina)
-
-Si Gana = Jugador:
-El turno es del jugador
-O si no:
-El turno es de la máquina
-
-Si quedan cartas en el montón:
-Se añade la primera carta del montón a la mano de la máquina
-Se elimina la primera carta del montón
-Se añade la primera carta del montón a la mano del jugador
-Se elimina la primera carta del montón
+	O si el turno es de la máquina:
+	Se muestra la interacción de la máquina()
 
 
+**Interacción del jugador**
+
+	Se mostrará por pantalla un menú muy chulo con información de la partida en curso
+
+	Se mostrará la primera carta del mazo del jugador
+	Se mostrará la segunda carta del mazo del jugador
+	Se mostrará la tercera carta del mazo del jugador
+
+	Se le pedirá al usuario que introduzca qué carta desea lanzar(1,2 o 3)
+	Se eliminará esa carta de la mano del usuario
+
+	Se asigna una carta de la máquina de las que tiene en su mazo
+	Se eliminará esa carta de la mano de la máquina
+
+	Se muestra otro bonito menú con las dos cartas lanzadas parecido al anterior
+
+	Se comparan los resultados()
+
+**Interacción de la máquina**
+
+	Se asigna una carta de la máquina de las que tiene en su mazo
+	Se eliminará esa carta de la mano de la máquina
+
+	Se muestra un menú con la carta que ha lanzado la máquina y con información de la partida en curso
+
+	Se mostrará la primera carta del mazo del jugador
+	Se mostrará la segunda carta del mazo del jugador
+	Se mostrará la tercera carta del mazo del jugador
+
+	Se le pedirá al usuario que introduzca qué carta desea lanzar(1,2 o 3)
+	Se eliminará esa carta de la mano del usuario
+	Se comparan los resultados()
+
+**Comparar resultados**
+
+	Recogemos la carta que ha lanzado el jugador
+	Recogemos la carta que ha lanzado la máquina
+
+	Si la carta del jugador es = 1:
+	Esa carta vale 11
+	O si la carta del jugador es = 2:
+	Esa carta vale 0.01
+	O si la carta del jugador es = 3:
+	Esa carta vale 10
+	O si la carta del jugador es = 4:
+	Esa carta vale 0.02
+	O si la carta del jugador es = 5:
+	Esa carta vale 0.03
+	O si la carta del jugador es = 6:
+	Esa carta vale 0.04
+	O si la carta del jugador es = 7:
+	Esa carta vale 0.05
+	O si la carta del jugador es = 10:
+	Esa carta vale 2
+	O si la carta del jugador es = 11:
+	Esa carta vale 3
+	O si la carta del jugador es = 12:
+	Esa carta vale 4
+
+	(Hacemos lo mismo con la carta de la máquina)
+
+	Si las cartas son distintas y la del jugador es del palo dominante y el de la máquina no:
+	Gana = el jugador
+	Suma puntos(Jugador)
+
+	O si las cartas son distintas y la carta de la máquina es del palo dominante y la del jugador no:
+	Gana = la máquina
+	Suma puntos(Máquina)
+
+	O si el palo del jugador es del mismo que el de la máquina:
+	Si el valor de la carta del jugador es mayor que la de la máquina:
+	Gana = el jugador
+	Suma puntos(Jugador)
+	O si no:
+	Gana = la máquina
+	Suma puntos(Máquina)
+
+	Si Gana = Jugador:
+	El turno es del jugador
+	O si no:
+	El turno es de la máquina
+
+	Si quedan cartas en el montón:
+	Se añade la primera carta del montón a la mano de la máquina
+	Se elimina la primera carta del montón
+	Se añade la primera carta del montón a la mano del jugador
+	Se elimina la primera carta del montón
 
 
-Comparar resultados(Sumar puntos)
-Si la suma de los puntos de la carta de la máquina y la del jugador supera a 1:
-Si ha ganado el Jugador:
-Se recogen los puntos del jugador y se le suman estos
-O si ha ganado la Máquina:
-Se recogen los puntos de la máquina y se le suman estos
-Se pone si la puntuación de las cartas es mayor a 1, ya que las que valen 0,01, 0,02, etc. No suman nada, sólo se usa su valor para saber quién ha ganado el turno!
+
+
+**Comparar resultados(Sumar puntos)**
+
+	Si la suma de los puntos de la carta de la máquina y la del jugador supera a 1:
+	Si ha ganado el Jugador:
+	Se recogen los puntos del jugador y se le suman estos
+	O si ha ganado la Máquina:
+	Se recogen los puntos de la máquina y se le suman estos
+	Se pone si la puntuación de las cartas es mayor a 1, ya que las que valen 0,01, 0,02, etc. No suman nada, sólo se usa su valor para saber quién ha ganado el turno!
 
 
 
 **￫Terminar Partida**
 
-Cuando se rompe el bucle del juego
-Si los puntos del jugador son  mayores que los de la máquina:
-Gana la partida el Jugador
-O si no:
-Gana la máquina
-//No puede haber empate
+	Cuando se rompe el bucle del juego
+	Si los puntos del jugador son  mayores que los de la máquina:
+	Gana la partida el Jugador
+	O si no:
+	Gana la máquina
+	//No puede haber empate
 
-Se muestra un menú muy chulo que indica quién ha ganado
+	Se muestra un menú muy chulo que indica quién ha ganado
 
-Se actualiza el archivo del registro y se le suma 1 a quien haya ganado(Jugador/Máquina)
+	Se actualiza el archivo del registro y se le suma 1 a quien haya ganado(Jugador/Máquina)
 
 
 
