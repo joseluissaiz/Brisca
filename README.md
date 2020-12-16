@@ -23,22 +23,22 @@ Por decisión unánime de los integrantes que lo conforman, el desarrollo del pr
 
 
 
-IDC (Investigación y desarrollo conceptual)
+**IDC (Investigación y desarrollo conceptual)**
 En esta fase se procederá a buscar información sobre el funcionamiento del juego, estos datos se utilizarán para crear el pseudocódigo del programa y posteriormente presentarlo a la siguiente fase, los integrantes del equipo deberán identificar las reglas generales que componen el juego y hacer un esquema sobre las historias de usuario que se van a necesitar.
 
 
 
-TEP (Traslado a entorno de programa)
+**TEP (Traslado a entorno de programa)**
 Al haber creado las historias de usuario del programa, se creará el pseudocódigo y este deberá modificarse para adaptarse al lenguaje de programación en cuestión, en este caso Python 3, para ello se recogerán todas las historias de usuario redactadas y pasarlas a un lenguaje más técnico describiendo qué función interna llevarán a cabo sobre el programa principal.
 
 
 
-CCF (Codificación y creación de funciones)
+**CCF (Codificación y creación de funciones)**
 En esta fase es donde se creará el código de la aplicación, es una de las fases más importantes y duraderas del proyecto, en está se creará un archivo principal que recogerá todas las funciones relacionadas con el juego y su estructura. En otros dos archivos aparte se irán desarrollando en paralelo distintos menús o subprocesos que finalmente se fusionarán en el archivo principal mediante una adaptación de las variables y valores para que todo encaje correctamente.
 
 
 
-PCE (Pruebas y corrección de errores)
+**PCE (Pruebas y corrección de errores)**
 Está es la última pero no menos importante fase de desarrollo, se incluirán en ella todas las pruebas unitarias y funcionales de las funciones del programa, se comprobará que todo el código esté estructurado, identificado y ordenado correctamente para la correcta interpretación y comprensión de este, aparte de que sea efectivo al ser ejecutado teniendo en cuenta las demás porciones de código.
 
 		
@@ -51,7 +51,7 @@ Está es la última pero no menos importante fase de desarrollo, se incluirán e
 
 Cómo jugar a la brisca (2 personas)!!!
 
-1 - Preparación.
+**1 - Preparación.**
 1.1 Se adquiere una baraja de cartas española
 1.2 Se sacan las cartas del sobre
 1.3 Se descartan las cartas 8 y 9 de cada palo
@@ -60,7 +60,7 @@ Cómo jugar a la brisca (2 personas)!!!
 1.6 Se saca la carta del triunfo (la dominante)
 1.7 Se elige el primer turno de forma aleatoria
 
-2 - Jugar turnos.
+**2 - Jugar turnos.**
 	2.1 El jugador que tiene el turno primero saca una carta de las que tiene
 	2.2 El siguiente jugador saca una cartas de las que posee
 	2.3 Se comparan los valores y palos de esas dos cartas con la central
@@ -69,12 +69,12 @@ Cómo jugar a la brisca (2 personas)!!!
            2.6 El jugador que gana el turno es el primero en coger una carta de la baraja
 	2.7 El jugador que ha ganado tiene el primer turno en la próxima jugada
 
-3 - Finalizar la partida
+**3 - Finalizar la partida**
 
-	3.1 La partida finaliza cuando se acaban las cartas de la baraja
+        3.1 La partida finaliza cuando se acaban las cartas de la baraja
 	3.1 Gana el jugador que haya conseguido más puntos en el proceso
 
-4 - Reglas del turno
+**4 - Reglas del turno**
 ￫ Si un jugador saca una carta del palo dominante y el otro no, gana inmediatamente el jugador que la ha sacado.
 
 ￫ Si el jugador que saca primero tira la carta de un palo, y el otro jugador tira otra de distinto palo que no es el dominante, gana el  jugador que ha tirado primero ya que él decide qué palo se va a jugar esa ronda.
@@ -94,7 +94,7 @@ Cómo jugar a la brisca (2 personas)!!!
 
 ## Creación del documento TEP
 
-￫Preparación
+**￫Preparación**
 
 Crear la baraja de cartas
 Crear una lista vacía de cartas[]
@@ -142,7 +142,7 @@ O si el número sale 1:
 Empieza otro jugador
 
 
-￫Jugar Turnos
+**￫Jugar Turnos**
 
 Se crea un bucle donde se gestionan los turnos
 Mientras queden cartas por jugar:
@@ -252,7 +252,7 @@ Se pone si la puntuación de las cartas es mayor a 1, ya que las que valen 0,01,
 
 
 
-￫Terminar Partida
+**￫Terminar Partida**
 
 Cuando se rompe el bucle del juego
 Si los puntos del jugador son  mayores que los de la máquina:
@@ -281,7 +281,7 @@ Sprints realizados durante el proceso de desarrollo del producto.
 
 
 
-⟲Primer día
+**⟲Primer día**
 
 SCRUM MASTER = Jaume Tomás
 Tiempo estimado: 3 horas
@@ -297,7 +297,7 @@ El siguiente paso ha sido programar cómo elegir el palo dominante (ya que en es
 Las últimas funciones que hemos definido son las de comprobar los puntos  y comprobar las cartas del ganador.
 
 
-⟲Segundo día:
+**⟲Segundo día:**
 
 SCRUM MASTER = Jose Luis Saiz
 Tiempo Estimado : 2 horas
@@ -309,7 +309,7 @@ A continuación comprobamos los distintos tipos de resultados de cada turno: si 
 También hemos construido el “menú” principal que informa de cómo va la partida, tanto si el turno lo continua la máquina o el jugador. Lo hemos hecho definiendo diferentes funciones de acuerdo a quien gana/continúa el turno
 
 
-⟲Tercer día.
+**⟲Tercer día.**
 
 SCRUM MASTER = Sandra Lopez
 Tiempo estimado: 4 horas
@@ -321,7 +321,7 @@ A continuación definimos la función que sirve para actualizar los resultados.
 Y finalmente hemos conseguido hacer el bucle del juego. Para lograr este bucle tuvimos que repasar varias veces el código entero para revisar que fallaba, ya que surgieron unos cuantos errores, pero al final lo conseguimos hacer funcionar correctamente.
 
 
-⟲Cuarto día
+**⟲Cuarto día**
 
 SCRUM MASTER = Jose Luis Saiz
 Tiempo estimado : 8 horas
