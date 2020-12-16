@@ -340,7 +340,7 @@ Tiempo real: 2 horas y 30 minutos
 Hemos programado la asignación de los puntos que corresponden al jugador y también a la máquina.
 
 
-A continuación comprobamos los distintos tipos de resultados de cada turno: si el palo de la máquina es dominante o no, si lo es el del jugador o no-
+A continuación comprobamos los distintos tipos de resultados de cada turno: si el palo de la máquina es dominante o no, si lo es el del jugador o no.
 
 
 También hemos construido el “menú” principal que informa de cómo va la partida, tanto si el turno lo continua la máquina o el jugador. Lo hemos hecho definiendo diferentes funciones de acuerdo a quien gana/continúa el turno
@@ -431,77 +431,77 @@ Por otro lado, creamos una función llamada menú retry que lo que hace es que c
 
 (Errores en las pruebas unitarias e integradas)
 
-Fallo :
+*Fallo :*
 Los puntos no se suman al acabar la ronda (fallo de la variable de las cartas)
 
-Solución :
+*Solución :*
 Asignar las variables de puntos y de cartas como globales, podríamos haber hecho que fuesen paramétricas pero superan las 4 variables y mejor si las dejamos como globales.
 
 
 
 
 
-Fallo :
+*Fallo :*
 Cuando al jugador le quedan menos de 3 cartas se produce un error en el índice de la lista.
 
-Solución :
+*Solución :*
 Poner otra condición en el menú del tablero y en la selección de opciones que cuente las cartas que le quedan al jugador y muestre diferentes opciones.
 
 
 
 
 
-Fallo :
+*Fallo :*
 No acaba nunca la partida (error de índice en la lista de cartas de la máquina)
 
-Solución :
+*Solución :*
 Cambiar el orden en la que se ejecuta el bucle, haciendo que en cada turno se compruebe el total de cartas del jugador, y no las del mazo.
  
 
 
 
-Fallo :
+*Fallo :*
 El menú principal no se muestra(no se reconoce la función)
 
-Solución :
+*Solución :*
 Cambiar de orden el código del programa, poniendo las funciones del menú principal a lo último.
 
 
 
-Fallo :
+*Fallo :*
 El menú principal no deja de parpadear y el ordenador se empieza a sobrecalentar a los pocos segundos
 
-Solución :
+*Solución :*
 Hacer que en el código msvcrt sólo ejecute el evento de elegir opción y no la del refresco del menú, y que este sólo se actualice cuando se interactúa.
 
 
-Fallo :
+*Fallo :*
 Al pasar de opción en el menú Retry se muestra el menú principal y no deja seleccionar nada
 
-Solución :
+*Solución :*
 Añadir la función ‘moverse_menuRetry()’ en el loop del menú principal.
 
 
 
-Fallo :
+*Fallo :*
 Al volver a jugar no se restablecen por defecto los valores de la partida, dando un error de índice en las cartas del jugador y de la máquina.
 
-Solución :
+*Solución :*
 Crear una función que restablezca todas las variables esenciales de la partida a por defecto y se vuelvan a generar las cartas (añadir al menú Retry)
 
 
-Fallo: 
+*Fallo:*
 El archivo de las partidas guardadas no se puede escribir (permiso denegado)
 
-Solución :
+*Solución :*
 Cambiar el componente ‘r’ (read) por el de ‘w’ (write) en el comando de ‘file.open()’
 
 
 
-Fallo: 
+*Fallo: *
 Los resultados de las partidas desestructuran el menú cuando sobrepasan los dos dígitos.
 
-Solución: 
+*Solución: *
 Crear un bucle ‘for’ que cuente los dígitos de ambos resultados y les sume los espacios necesarios para que los bordes del menú se vean bien.
 
 
