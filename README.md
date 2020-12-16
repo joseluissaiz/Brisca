@@ -25,10 +25,14 @@ Por decisión unánime de los integrantes que lo conforman, el desarrollo del pr
 
 
 
+
+
 **IDC (Investigación y desarrollo conceptual)**
 
 
 En esta fase se procederá a buscar información sobre el funcionamiento del juego, estos datos se utilizarán para crear el pseudocódigo del programa y posteriormente 	presentarlo a la siguiente fase, los integrantes del equipo deberán identificar las reglas generales que componen el juego y hacer un esquema sobre las historias de usuario que se van a necesitar.
+
+
 
 
 
@@ -39,10 +43,14 @@ Al haber creado las historias de usuario del programa, se creará el pseudocódi
 
 
 
+
+
 **CCF (Codificación y creación de funciones)**
 
 
 En esta fase es donde se creará el código de la aplicación, es una de las fases más importantes y duraderas del proyecto, en está se creará un archivo principal que recogerá todas las funciones relacionadas con el juego y su estructura. En otros dos archivos aparte se irán desarrollando en paralelo distintos menús o subprocesos que finalmente se fusionarán en el archivo principal mediante una adaptación de las variables y valores para que todo encaje correctamente.
+
+
 
 
 
@@ -299,7 +307,7 @@ Sprints realizados durante el proceso de desarrollo del producto.
 
 
 
-**⟲Primer día**
+### **⟲Primer día**
 
 
 SCRUM MASTER = Jaume Tomás
@@ -324,7 +332,7 @@ El siguiente paso ha sido programar cómo elegir el palo dominante (ya que en es
 Las últimas funciones que hemos definido son las de comprobar los puntos  y comprobar las cartas del ganador.
 
 
-**⟲Segundo día:**
+### **⟲Segundo día:**
 
 SCRUM MASTER = Jose Luis Saiz
 
@@ -347,7 +355,7 @@ También hemos construido el “menú” principal que informa de cómo va la pa
 
 
 
-**⟲Tercer día.**
+### **⟲Tercer día.**
 
 SCRUM MASTER = Sandra Lopez
 
@@ -374,7 +382,7 @@ Y finalmente hemos conseguido hacer el bucle del juego. Para lograr este bucle t
 
 
 
-**⟲Cuarto día**
+### **⟲Cuarto día**
 
 SCRUM MASTER = Jose Luis Saiz
 
@@ -451,12 +459,16 @@ Poner otra condición en el menú del tablero y en la selección de opciones que
 
 
 
+
+
 ### <span style="color:red">Fallo :</span>
 No acaba nunca la partida (error de índice en la lista de cartas de la máquina)
 
 ### <span style="color:green">Solución :</span>
 Cambiar el orden en la que se ejecuta el bucle, haciendo que en cada turno se compruebe el total de cartas del jugador, y no las del mazo.
  
+
+
 
 
 
@@ -468,11 +480,17 @@ Cambiar de orden el código del programa, poniendo las funciones del menú princ
 
 
 
+
+
 ### <span style="color:red">Fallo :</span>
 El menú principal no deja de parpadear y el ordenador se empieza a sobrecalentar a los pocos segundos
 
 ### <span style="color:green">Solución :</span>
 Hacer que en el código msvcrt sólo ejecute el evento de elegir opción y no la del refresco del menú, y que este sólo se actualice cuando se interactúa.
+
+
+
+
 
 
 ### <span style="color:red">Fallo :</span>
@@ -483,6 +501,9 @@ Añadir la función ‘moverse_menuRetry()’ en el loop del menú principal.
 
 
 
+
+
+
 ### <span style="color:red">Fallo :</span>
 Al volver a jugar no se restablecen por defecto los valores de la partida, dando un error de índice en las cartas del jugador y de la máquina.
 
@@ -490,11 +511,17 @@ Al volver a jugar no se restablecen por defecto los valores de la partida, dando
 Crear una función que restablezca todas las variables esenciales de la partida a por defecto y se vuelvan a generar las cartas (añadir al menú Retry)
 
 
+
+
+
 ### <span style="color:red">Fallo :</span>
 El archivo de las partidas guardadas no se puede escribir (permiso denegado)
 
 ### <span style="color:green">Solución :</span>
 Cambiar el componente ‘r’ (read) por el de ‘w’ (write) en el comando de ‘file.open()’
+
+
+
 
 
 
