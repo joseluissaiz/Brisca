@@ -6,6 +6,7 @@ Proyecto Programación 1r Trimestre
 
 ## Objetivos
 
+
 El objetivo de este proyecto es la creación de un juego de mesa en entorno texto mediante la cooperación del equipo de desarrollo utilizando la metodología Scrum.
 
 El juego elegido es el famoso juego de cartas español denominado como “la Brisca”
@@ -19,27 +20,36 @@ El verdadero reto del juego será poder jugar, con resultado de ganar o perder p
 
 ## Planificación
 
+
 Por decisión unánime de los integrantes que lo conforman, el desarrollo del proyecto se dividirá en cuatro fases, la fase de investigación y desarrollo conceptual, la fase de traslado en entornos de programa, la fase de codificación y creación de funciones, y finalmente la fase de pruebas y corrección de errores.
 
 
 
 **IDC (Investigación y desarrollo conceptual)**
-	En esta fase se procederá a buscar información sobre el funcionamiento del juego, estos datos se utilizarán para crear el pseudocódigo del programa y posteriormente 	presentarlo a la siguiente fase, los integrantes del equipo deberán identificar las reglas generales que componen el juego y hacer un esquema sobre las historias de usuario que se van a necesitar.
+
+
+En esta fase se procederá a buscar información sobre el funcionamiento del juego, estos datos se utilizarán para crear el pseudocódigo del programa y posteriormente 	presentarlo a la siguiente fase, los integrantes del equipo deberán identificar las reglas generales que componen el juego y hacer un esquema sobre las historias de usuario que se van a necesitar.
 
 
 
 **TEP (Traslado a entorno de programa)**
-	Al haber creado las historias de usuario del programa, se creará el pseudocódigo y este deberá modificarse para adaptarse al lenguaje de programación en cuestión, en este caso Python 3, para ello se recogerán todas las historias de usuario redactadas y pasarlas a un lenguaje más técnico describiendo qué función interna llevarán a cabo sobre el programa principal.
+
+
+Al haber creado las historias de usuario del programa, se creará el pseudocódigo y este deberá modificarse para adaptarse al lenguaje de programación en cuestión, en este caso Python 3, para ello se recogerán todas las historias de usuario redactadas y pasarlas a un lenguaje más técnico describiendo qué función interna llevarán a cabo sobre el programa principal.
 
 
 
 **CCF (Codificación y creación de funciones)**
-	En esta fase es donde se creará el código de la aplicación, es una de las fases más importantes y duraderas del proyecto, en está se creará un archivo principal que recogerá todas las funciones relacionadas con el juego y su estructura. En otros dos archivos aparte se irán desarrollando en paralelo distintos menús o subprocesos que finalmente se fusionarán en el archivo principal mediante una adaptación de las variables y valores para que todo encaje correctamente.
+
+
+En esta fase es donde se creará el código de la aplicación, es una de las fases más importantes y duraderas del proyecto, en está se creará un archivo principal que recogerá todas las funciones relacionadas con el juego y su estructura. En otros dos archivos aparte se irán desarrollando en paralelo distintos menús o subprocesos que finalmente se fusionarán en el archivo principal mediante una adaptación de las variables y valores para que todo encaje correctamente.
 
 
 
 **PCE (Pruebas y corrección de errores)**
-	Está es la última pero no menos importante fase de desarrollo, se incluirán en ella todas las pruebas unitarias y funcionales de las funciones del programa, se comprobará que todo el código esté estructurado, identificado y ordenado correctamente para la correcta interpretación y comprensión de este, aparte de que sea efectivo al ser ejecutado teniendo en cuenta las demás porciones de código.
+
+
+Está es la última pero no menos importante fase de desarrollo, se incluirán en ella todas las pruebas unitarias y funcionales de las funciones del programa, se comprobará que todo el código esté estructurado, identificado y ordenado correctamente para la correcta interpretación y comprensión de este, aparte de que sea efectivo al ser ejecutado teniendo en cuenta las demás porciones de código.
 
 		
 
@@ -68,7 +78,7 @@ Cómo jugar a la brisca (2 personas)!!!
 	2.3 Se comparan los valores y palos de esas dos cartas con la central
 	2.4 Las reglas del turno surgen efecto y se decide un ganador
 	2.5 El jugador que gana suma los puntos de las dos cartas tiradas
-           2.6 El jugador que gana el turno es el primero en coger una carta de la baraja
+        2.6 El jugador que gana el turno es el primero en coger una carta de la baraja
 	2.7 El jugador que ha ganado tiene el primer turno en la próxima jugada
 
 **3 - Finalizar la partida**
@@ -283,6 +293,7 @@ Cómo jugar a la brisca (2 personas)!!!
 
 ## Creación del documento CCF
 
+
 Sprints realizados durante el proceso de desarrollo del producto.
 
 
@@ -290,16 +301,25 @@ Sprints realizados durante el proceso de desarrollo del producto.
 
 **⟲Primer día**
 
+
 SCRUM MASTER = Jaume Tomás
+
+
 Tiempo estimado: 3 horas
+
+
 Tiempo real : 5 horas
+
 
 Lo primero que vamos a hacer es declarar las variables que vamos a utilizar a lo largo de todo el código del juego. 
 También hemos declarado algunos imports que nos pueden ser de gran ayuda para futuras funciones como el random, os, o sys
 
+
 A continuación hemos empezado con las funciones. Hemos definido y probado la función que va a generar las cartas y hemos repartido las cartas al jugador y a la màquina. También hemos definido la función de borrar pantalla.
 
+
 El siguiente paso ha sido programar cómo elegir el palo dominante (ya que en este juego es muy importante a la hora de contar los puntos) y el como elegir los turnos de juego.
+
 
 Las últimas funciones que hemos definido son las de comprobar los puntos  y comprobar las cartas del ganador.
 
@@ -307,38 +327,93 @@ Las últimas funciones que hemos definido son las de comprobar los puntos  y com
 **⟲Segundo día:**
 
 SCRUM MASTER = Jose Luis Saiz
+
+
 Tiempo Estimado : 2 horas
+
+
 Tiempo real: 2 horas y 30 minutos
 
+
+
+
 Hemos programado la asignación de los puntos que corresponden al jugador y también a la máquina.
-A continuación comprobamos los distintos tipos de resultados de cada turno: si el palo de la máquina es dominante o no, si lo es el del jugador o no
+
+
+A continuación comprobamos los distintos tipos de resultados de cada turno: si el palo de la máquina es dominante o no, si lo es el del jugador o no-
+
 
 También hemos construido el “menú” principal que informa de cómo va la partida, tanto si el turno lo continua la máquina o el jugador. Lo hemos hecho definiendo diferentes funciones de acuerdo a quien gana/continúa el turno
+
 
 
 **⟲Tercer día.**
 
 SCRUM MASTER = Sandra Lopez
+
+
 Tiempo estimado: 4 horas
+
+
 Tiempo real : 7 horas
 
+
+
+
 Hemos continuado definiendo los turnos en caso de que sea la máquina quien continúe el turno.
+
+
 Posteriormente  hemos hecho el código para borrar las cartas del jugador y de la máquina cada vez que se tira una carta, y también lo que pasa cuando ya no quedan cartas en el mazo.
+
+
 A continuación definimos la función que sirve para actualizar los resultados.
+
+
 Y finalmente hemos conseguido hacer el bucle del juego. Para lograr este bucle tuvimos que repasar varias veces el código entero para revisar que fallaba, ya que surgieron unos cuantos errores, pero al final lo conseguimos hacer funcionar correctamente.
+
+
 
 
 **⟲Cuarto día**
 
 SCRUM MASTER = Jose Luis Saiz
+
+
 Tiempo estimado : 8 horas
+
+
 Tiempo real : 1d 
 
+
+
+
 Hemos declarado la función del menú principal, la idea del menú es que podamos seleccionar mediante unos controles la opción deseada y también que se pueda retroceder si es necesario. En primer lugar, declaramos la función de mostrar el menú, esta función únicamente consiste en como se verá la interfaz del menú.
+
+
 En segundo lugar, declaramos las variables del menú. Después de la declaración de las variables definimos varias funciones que nos permitan movernos por todo el menú mediante los controles ya mostrados al principio.
-Finalmente, creamos distintas funciones para cada opción de nuestro menú. La opción de las instrucciones enseñará mediante otro uso de prints las instrucciones de nuestro juego ya sea la puntuación de las cartas como las reglas de los turnos. En cuanto a la opción de registro, hemos tenido algún que otro impedimento a la hora de hacer su función puesto que queríamos hacer un registro de todas las partidas realizadas y se nos ha hecho más complejo de lo que esperábamos.La función de registro consiste en crear un archivo de 2 líneas, la primera línea de arriba es el número de partidas que ha ganado el usuario y la segunda línea es el número de partidas que ha ganado la máquina. La función lee por líneas el archivo y guarda el número en una variable ya creada. Al final de cada partida, dependiendo del resultado le suma uno al usuario o a la máquina y por último reescribe el documento con los registros actualizados. Finalmente muestra el registro actualizado en la opción del menú.
+
+
+Finalmente, creamos distintas funciones para cada opción de nuestro menú. La opción de las instrucciones enseñará mediante otro uso de prints las instrucciones de nuestro juego ya sea la puntuación de las cartas como las reglas de los turnos. 
+
+
+En cuanto a la opción de registro, hemos tenido algún que otro impedimento a la hora de hacer su función puesto que queríamos hacer un registro de todas las partidas realizadas y se nos ha hecho más complejo de lo que esperábamos.
+
+
+La función de registro consiste en crear un archivo de 2 líneas, la primera línea de arriba es el número de partidas que ha ganado el usuario y la segunda línea es el número de partidas que ha ganado la máquina. 
+
+
+La función lee por líneas el archivo y guarda el número en una variable ya creada. 
+
+
+Al final de cada partida, dependiendo del resultado le suma uno al usuario o a la máquina y por último reescribe el documento con los registros actualizados. Finalmente muestra el registro actualizado en la opción del menú.
+
+
 Por otra parte, la opción de jugar te dirige directamente al juego con sus funciones explicadas anteriormente incorporadas. 
+
+
 Finalmente, la opción de salir evidentemente sale del menú principal del juego.
+
+
 Por otro lado, creamos una función llamada menú retry que lo que hace es que cada vez que acabe una partida se muestre un menú que te dé la opción de jugar otra vez o volver al menú principal. Cada opción junto a sus funciones ya explicadas anteriormente.
 
 
