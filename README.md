@@ -431,69 +431,69 @@ Por otro lado, creamos una función llamada menú retry que lo que hace es que c
 
 (Errores en las pruebas unitarias e integradas)
 
-*Fallo :*
+<span style="color:red">*Fallo :*</span>
 Los puntos no se suman al acabar la ronda (fallo de la variable de las cartas)
 
-*Solución :*
+<span style="color:green">*Solución :*</span>
 Asignar las variables de puntos y de cartas como globales, podríamos haber hecho que fuesen paramétricas pero superan las 4 variables y mejor si las dejamos como globales.
 
 
 
 
 
-*Fallo :*
+<span style="color:red">*Fallo :*</span>
 Cuando al jugador le quedan menos de 3 cartas se produce un error en el índice de la lista.
 
-*Solución :*
+<span style="color:green">*Solución :*</span>
 Poner otra condición en el menú del tablero y en la selección de opciones que cuente las cartas que le quedan al jugador y muestre diferentes opciones.
 
 
 
 
 
-*Fallo :*
+<span style="color:red">*Fallo :*</span>
 No acaba nunca la partida (error de índice en la lista de cartas de la máquina)
 
-*Solución :*
+<span style="color:green">*Solución :*</span>
 Cambiar el orden en la que se ejecuta el bucle, haciendo que en cada turno se compruebe el total de cartas del jugador, y no las del mazo.
  
 
 
 
-*Fallo :*
+<span style="color:red">*Fallo :*</span>
 El menú principal no se muestra(no se reconoce la función)
 
-*Solución :*
+<span style="color:green">*Solución :*</span>
 Cambiar de orden el código del programa, poniendo las funciones del menú principal a lo último.
 
 
 
-*Fallo :*
+<span style="color:red">*Fallo :*</span>
 El menú principal no deja de parpadear y el ordenador se empieza a sobrecalentar a los pocos segundos
 
-*Solución :*
+<span style="color:green">*Solución :*</span>
 Hacer que en el código msvcrt sólo ejecute el evento de elegir opción y no la del refresco del menú, y que este sólo se actualice cuando se interactúa.
 
 
-*Fallo :*
+<span style="color:red">*Fallo :*</span>
 Al pasar de opción en el menú Retry se muestra el menú principal y no deja seleccionar nada
 
-*Solución :*
+<span style="color:green">*Solución :*</span>
 Añadir la función ‘moverse_menuRetry()’ en el loop del menú principal.
 
 
 
-*Fallo :*
+<span style="color:red">*Fallo :*</span>
 Al volver a jugar no se restablecen por defecto los valores de la partida, dando un error de índice en las cartas del jugador y de la máquina.
 
-*Solución :*
+<span style="color:green">*Solución :*</span>
 Crear una función que restablezca todas las variables esenciales de la partida a por defecto y se vuelvan a generar las cartas (añadir al menú Retry)
 
 
-*Fallo:*
+<span style="color:red">*Fallo :*</span>
 El archivo de las partidas guardadas no se puede escribir (permiso denegado)
 
-*Solución :*
+<span style="color:green">*Solución :*</span>
 Cambiar el componente ‘r’ (read) por el de ‘w’ (write) en el comando de ‘file.open()’
 
 
@@ -501,7 +501,7 @@ Cambiar el componente ‘r’ (read) por el de ‘w’ (write) en el comando de 
 *Fallo: *
 Los resultados de las partidas desestructuran el menú cuando sobrepasan los dos dígitos.
 
-*Solución: *
+<span style="color:green">*Solución :*</span>
 Crear un bucle ‘for’ que cuente los dígitos de ambos resultados y les sume los espacios necesarios para que los bordes del menú se vean bien.
 
 
